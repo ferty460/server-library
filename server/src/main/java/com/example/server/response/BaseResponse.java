@@ -8,6 +8,6 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class BaseResponse {
-    protected  boolean success;
+    protected boolean success;
     protected String message;
 }
