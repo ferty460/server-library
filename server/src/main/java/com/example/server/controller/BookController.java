@@ -1,7 +1,6 @@
 package com.example.server.controller;
 
 import com.example.server.entity.BookEntity;
-import com.example.server.exception.ValidationException;
 import com.example.server.response.BaseResponse;
 import com.example.server.response.BookListResponse;
 import com.example.server.response.BookResponse;
