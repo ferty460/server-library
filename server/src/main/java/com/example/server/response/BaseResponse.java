@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class BaseResponse {
+public class BaseResponse { // хаптьфу
     protected boolean success;
     protected String message;
 }

@@ -1,6 +1,8 @@
 package com.example.server.exception;
 
-public class ValidationExceptionPublisher extends Exception{
+import javax.validation.ValidationException;
+
+public class ValidationExceptionPublisher extends ValidationException {
     public ValidationExceptionPublisher(String message) {
         super(message);
     }
