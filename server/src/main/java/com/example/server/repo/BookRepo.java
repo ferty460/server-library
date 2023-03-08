@@ -7,5 +7,5 @@ import java.util.Optional;
 
 
 public interface BookRepo extends CrudRepository<BookEntity,Long> {
-
+    Iterable<BookEntity> findDistinctByPublisher_PublisherOrPublisher_City(String title, String city);
 }

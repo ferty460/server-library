@@ -4,11 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89028c2f-c17d-4a97-a0da-34bb6bc37905" name="Changes" comment="test">
+    <list default="true" id="89028c2f-c17d-4a97-a0da-34bb6bc37905" name="Changes" comment="exceptions &amp; utils">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/server/repo/AuthorRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/server/repo/PublisherRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/server/entity/AuthorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/server/entity/AuthorEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/server/util/AuthorValidationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/server/util/AuthorValidationUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/server/util/BookValidationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/server/util/BookValidationUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/server/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/server/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/server/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/server/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/server/controller/PublisherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/server/controller/PublisherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/server/repo/BookRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/server/repo/BookRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/server/service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/server/service/AuthorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/server/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/server/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/server/service/PublisherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/server/service/PublisherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/controller/AuthorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/controller/AuthorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/entity/AuthorEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/entity/AuthorEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/entity/PublisherEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/entity/PublisherEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/response/AuthorListResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/response/AuthorListResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/response/AuthorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/response/AuthorResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/response/BookListResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/response/BookListResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/response/BookResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/response/BookResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/response/PublisherListResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/response/PublisherListResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/response/PublisherResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/response/PublisherResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/service/AuthorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/service/AuthorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/util/AuthorValidationUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/util/AuthorValidationUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/server/util/BookValidationUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/server/util/BookValidationUtils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -90,11 +108,19 @@
       <option name="project" value="LOCAL" />
       <updated>1678116183473</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="exceptions &amp; utils">
+      <created>1678300299642</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678300299642</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="exceptions &amp; utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="exceptions &amp; utils" />
   </component>
 </project>

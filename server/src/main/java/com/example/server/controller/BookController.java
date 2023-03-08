@@ -61,5 +61,9 @@ public class BookController {
             return ResponseEntity.badRequest().body(new BaseResponse(false, e.getMessage()));
         }
     }
+    @GetMapping()
+    public ResponseEntity<BaseResponse> getPublisher(@RequestParam String title, @RequestParam String city) {
+        return ResponseEntity.ok(new BookListResponse(service.getPublisher(title, city)));
+    }
 }
 
