@@ -16,7 +16,7 @@ public class AuthorEntity {
     private Long id;
     @NotBlank(message = "Поле Имя не может быть пустым")
     private String name;
-    @NotBlank(message = "Поле Имя не может быть пустым")
+    @NotBlank(message = "Поле Фамилия не может быть пустым")
     private String lastname;
     private String surname;
     @JsonIgnore
