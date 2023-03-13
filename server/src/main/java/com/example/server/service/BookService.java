@@ -23,7 +23,7 @@ public class BookService {
     public Iterable<BookEntity> getAll() {
         return repo.findAll();
     }
-    public Iterable<BookEntity> getPublisher(String title, String city) {
-        return repo.findDistinctByPublisher_PublisherOrPublisher_City(title, city);
+    public Iterable<BookEntity> getTitle(String title) {
+        return repo.findByTitle(title);
     }
 }
