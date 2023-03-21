@@ -1,5 +1,6 @@
 package com.example.server.controller;
 
+import com.example.server.entity.BookEntity;
 import com.example.server.entity.PublisherEntity;
 import com.example.server.response.BaseResponse;
 import com.example.server.response.PublisherListResponse;
@@ -28,6 +29,15 @@ public class PublisherController {
             return ResponseEntity.ok(new PublisherResponse(true, "Издательство добавлено", temp));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(new PublisherResponse(false, e.getMessage(), null));
+        }
+    }
+    @DeleteMapping("/delete")
+    public ResponseEntity<BaseResponse> delete(@RequestParam("id") PublisherEntity data) {
+        try {
+            service.delete(data.getId());
+            return ResponseEntity.ok(new BaseResponse(true, "Издательство удалено"));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(new BaseResponse(false, e.getMessage()));
         }
     }
 }

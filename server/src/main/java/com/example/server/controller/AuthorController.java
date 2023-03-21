@@ -1,6 +1,7 @@
 package com.example.server.controller;
 
 import com.example.server.entity.AuthorEntity;
+import com.example.server.entity.BookEntity;
 import com.example.server.response.AuthorListResponse;
 import com.example.server.response.AuthorResponse;
 import com.example.server.response.BaseResponse;
@@ -28,6 +29,15 @@ public class AuthorController {
             return ResponseEntity.ok(new AuthorResponse(true, "Автор добавлен", temp));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(new AuthorResponse(false, e.getMessage(), null));
+        }
+    }
+    @DeleteMapping("/delete")
+    public ResponseEntity<BaseResponse> delete(@RequestParam("id") AuthorEntity data) {
+        try {
+            service.delete(data.getId());
+            return ResponseEntity.ok(new BaseResponse(true, "Автор удален"));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(new BaseResponse(false, e.getMessage()));
         }
     }
 }
