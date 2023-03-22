@@ -40,4 +40,14 @@ public class PublisherController {
             return ResponseEntity.badRequest().body(new BaseResponse(false, e.getMessage()));
         }
     }
+
+    @PostMapping("/update")
+    public ResponseEntity<BaseResponse> update(@RequestBody PublisherEntity data) {
+        try {
+            service.save(data);
+            return ResponseEntity.ok(new BaseResponse(true, "В издательство внесены изменения"));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(new BaseResponse(false, e.getMessage()));
+        }
+    }
 }

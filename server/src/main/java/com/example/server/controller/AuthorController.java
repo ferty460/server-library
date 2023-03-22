@@ -2,6 +2,7 @@ package com.example.server.controller;
 
 import com.example.server.entity.AuthorEntity;
 import com.example.server.entity.BookEntity;
+import com.example.server.entity.PublisherEntity;
 import com.example.server.response.AuthorListResponse;
 import com.example.server.response.AuthorResponse;
 import com.example.server.response.BaseResponse;
@@ -36,6 +37,16 @@ public class AuthorController {
         try {
             service.delete(data.getId());
             return ResponseEntity.ok(new BaseResponse(true, "Автор удален"));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(new BaseResponse(false, e.getMessage()));
+        }
+    }
+
+    @PostMapping("/update")
+    public ResponseEntity<BaseResponse> update(@RequestBody AuthorEntity data) {
+        try {
+            service.save(data);
+            return ResponseEntity.ok(new BaseResponse(true, "В автора внесены изменения"));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(new BaseResponse(false, e.getMessage()));
         }
