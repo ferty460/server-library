@@ -23,10 +23,10 @@ public class PublisherController {
         return ResponseEntity.ok(new PublisherListResponse(service.getAll()));
     }
     @PostMapping("/add")
-    public ResponseEntity<BaseResponse> registration (@Valid @RequestBody PublisherEntity data) {
+    public ResponseEntity<PublisherResponse> registration (@Valid @RequestBody PublisherEntity data) {
         try {
-            PublisherEntity temp = service.save(data);
-            return ResponseEntity.ok(new PublisherResponse(true, "Издательство добавлено", temp));
+            service.save(data);
+            return ResponseEntity.ok(new PublisherResponse(true, "Издательство добавлено", data));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(new PublisherResponse(false, e.getMessage(), null));
         }
@@ -45,9 +45,9 @@ public class PublisherController {
     public ResponseEntity<BaseResponse> update(@RequestBody PublisherEntity data) {
         try {
             service.save(data);
-            return ResponseEntity.ok(new BaseResponse(true, "В издательство внесены изменения"));
+            return ResponseEntity.ok(new PublisherResponse(true, "В издательство внесены изменения", data));
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body(new BaseResponse(false, e.getMessage()));
+            return ResponseEntity.badRequest().body(new PublisherResponse(false, e.getMessage(), null));
         }
     }
 }

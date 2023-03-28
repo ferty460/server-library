@@ -36,9 +36,9 @@ public class BookController {
     public ResponseEntity<BaseResponse> update(@RequestBody BookEntity data) {
         try {
             service.save(data);
-            return ResponseEntity.ok(new BaseResponse(true, "В книгу внесены изменения"));
+            return ResponseEntity.ok(new BookResponse(true, "В книгу внесены изменения", data));
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body(new BaseResponse(false, e.getMessage()));
+            return ResponseEntity.badRequest().body(new BookResponse(false, e.getMessage(), null));
         }
     }
 

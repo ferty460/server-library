@@ -6,6 +6,7 @@ import com.example.server.entity.PublisherEntity;
 import com.example.server.response.AuthorListResponse;
 import com.example.server.response.AuthorResponse;
 import com.example.server.response.BaseResponse;
+import com.example.server.response.BookResponse;
 import com.example.server.service.AuthorService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -46,9 +47,9 @@ public class AuthorController {
     public ResponseEntity<BaseResponse> update(@RequestBody AuthorEntity data) {
         try {
             service.save(data);
-            return ResponseEntity.ok(new BaseResponse(true, "В автора внесены изменения"));
+            return ResponseEntity.ok(new AuthorResponse(true, "В автора внесены изменения", data));
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body(new BaseResponse(false, e.getMessage()));
+            return ResponseEntity.badRequest().body(new AuthorResponse(false, e.getMessage(), null));
         }
     }
 }
